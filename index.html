@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UMKM Admin Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* Custom scrollbar for webkit browsers */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #0d9488; /* teal-600 */
+        border-radius: 10px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #0f766e; /* teal-700 */
+      }
+
+      /* Animation for Toast Notifications */
+      @keyframes fade-in-right {
+        from {
+          opacity: 0;
+          transform: translateX(100%);
+        }
+        to {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+      .animate-fade-in-right {
+        animation: fade-in-right 0.5s ease-out forwards;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50">
+    <div id="root">
+      <div style="display: flex; justify-content: center; align-items: center; height: 100vh; font-family: Arial;">
+        <div style="text-align: center;">
+          <h1 style="color: #0d9488; font-size: 24px; margin-bottom: 20px;">Loading UMKM Admin Dashboard...</h1>
+          <div style="border: 4px solid #f3f3f3; border-top: 4px solid #0d9488; border-radius: 50%; width: 40px; height: 40px; animation: spin 1s linear infinite; margin: 0 auto;"></div>
+          <style>
+            @keyframes spin {
+              0% { transform: rotate(0deg); }
+              100% { transform: rotate(360deg); }
+            }
+          </style>
+          <p style="margin-top: 20px; color: #666; font-size: 14px;">If this message persists, check the browser console (F12) for errors.</p>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/index.tsx"></script>
+    <script>
+      console.log('HTML loaded');
+      window.addEventListener('error', (e) => {
+        console.error('Global error:', e.error);
+        document.body.innerHTML = '<div style="padding: 20px; background: #fee; color: #c00;"><h1>Error Loading App</h1><pre>' + e.error + '</pre></div>';
+      });
+    </script>
+  </body>
+</html>

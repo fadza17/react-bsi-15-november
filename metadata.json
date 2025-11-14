@@ -1,0 +1,5 @@
+{
+  "name": "UMKM Admin Dashboard",
+  "description": "An admin dashboard for managing UMKM products, finances, and users, based on a provided UI design. It features navigation, data tables, and action controls.",
+  "requestFramePermissions": []
+}
